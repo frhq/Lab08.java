@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Act1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int x = input.nextInt();
+        System.out.println(sumDigits(x));
+    }    
+    public static int sumDigits(int number){
+        int sum = 0;
+        while(number!=0){
+            sum = sum + number % 10;
+            number = number / 10;
+        }
+        return sum;
+        
+    } 
+}
