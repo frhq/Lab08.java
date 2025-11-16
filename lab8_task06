@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Act6 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a lower case sentence: ");
+
+        while (input.hasNext()) {
+            String word = input.next();
+            System.out.print(capitalize(word) + " ");
+        }
+    
+        input.close();
+    }
+
+    public static String capitalize(String lower_case_word){
+        char firstChar = Character.toUpperCase(lower_case_word.charAt(0));
+        return firstChar + lower_case_word.substring(1);
+    }
+} // to end the program enter CTRL+Z and press Enter
